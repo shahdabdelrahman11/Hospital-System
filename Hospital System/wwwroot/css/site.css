@@ -1,0 +1,69 @@
+.page-bg {
+    min-height: 100vh;
+    background: linear-gradient(rgba(20, 60, 140, 0.55), rgba(20, 60, 140, 0.55)), url('/images/hospital.jpg') center / cover fixed no-repeat;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+    .page-bg h2 {
+        color: #fff;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+.hospital-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+}
+
+    .hospital-nav .nav-link,
+    .hospital-nav .navbar-brand {
+        color: #fff;
+    }
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(20, 60, 140, 0.35), rgba(20, 60, 140, 0.35)), url('/images/hospital.jpg') center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 60px 40px;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 90%;
+}
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 30px 0;
+}
+
+.page-btn {
+    padding: 8px 14px;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: 0.2s;
+}
+
+    .page-btn:hover {
+        background-color: #0d6efd;
+        color: white;
+    }
+
+    .page-btn.active {
+        background-color: #0d6efd;
+        color: white;
+    }

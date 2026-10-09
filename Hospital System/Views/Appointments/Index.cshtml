@@ -1,0 +1,38 @@
+﻿@model List<Appointment>
+
+<div class="page-bg">
+    <div class="container">
+        <h2 class="mb-4">Booked Appointments</h2>
+
+        @if (!Model.Any())
+        {
+            <div class="alert alert-info">No appointments yet.</div>
+        }
+        else
+        {
+            <table class="table table-striped bg-white">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Patient</th>
+                        <th>Doctor</th>
+                        <th>Specialization</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var a in Model)
+                    {
+                        <tr>
+                            <td>@a.PatientName</td>
+                            <td>@a.Doctor.Name</td>
+                            <td>@a.Doctor.Specialization</td>
+                            <td>@a.Date.ToString("dd/MM/yyyy")</td>
+                            <td>@DateTime.Today.Add(a.Time).ToString("hh:mm tt")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>

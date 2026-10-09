@@ -1,0 +1,12 @@
+insert into Doctors (Name, Specialization, Image) values ('Keely Willgoose', 'Cardiology', 'img4.jpg');
+insert into Doctors (Name, Specialization, Image) values ('Galvan Redmile', 'Cardiology', 'img2.png');
+insert into Doctors (Name, Specialization, Image) values ('Janella Erb', 'Pediatrics', 'img3.jpg');
+insert into Doctors (Name, Specialization, Image) values ('Candra Shafier', 'Pediatrics', 'img3.jpg');
+insert into Doctors (Name, Specialization, Image) values ('Antonio Strathman', 'Dermatology', 'img3.jpg');
+insert into Doctors (Name, Specialization, Image) values ('Jasun Slegg', 'Orthopedics', 'img4.jpg');
+insert into Doctors (Name, Specialization, Image) values ('Pennie Huebner', 'Dermatology', 'img2.png');
+insert into Doctors (Name, Specialization, Image) values ('Carola Pegram', 'Orthopedics', 'img4.jpg');
+insert into Doctors (Name, Specialization, Image) values ('Becka Leither', 'Dermatology', 'img1.png');
+insert into Doctors (Name, Specialization, Image) values ('Rowe Tallow', 'Pediatrics', 'img4.jpg');
+insert into Doctors (Name, Specialization, Image) values ('Moe Bedlington', 'Neurology', 'img1.png');
+insert into Doctors (Name, Specialization, Image) values ('Baron Hedderly', 'Pediatrics', 'img4.jpg');

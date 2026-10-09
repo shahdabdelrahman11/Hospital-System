@@ -1,0 +1,47 @@
+﻿@model Doctor
+
+<div class="page-bg">
+    <div class="container">
+        <div class="card col-md-6 mx-auto p-4">
+            <h3>Book Appointment</h3>
+            <p class="text-muted">@Model.Name - @Model.Specialization</p>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+
+            <form method="post">
+                <input type="hidden" name="doctorId" value="@Model.Id" />
+
+                <div class="mb-3">
+                    <label class="form-label">Patient Name</label>
+                    <input type="text" name="patientName" value="@ViewBag.PatientName" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Date</label>
+                    <input type="date" name="date" value="@ViewBag.Date"
+                           min="@DateTime.Today.ToString("yyyy-MM-dd")" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Time</label>
+                    <select name="time" class="form-select" required>
+                        <option value="">-- Select Time --</option>
+                        @foreach (var slot in (List<TimeSpan>)ViewBag.Slots)
+                        {
+                            var value = slot.ToString(@"hh\:mm");
+                            <option value="@value" selected="@((string?)ViewBag.Time == value)">
+                                @DateTime.Today.Add(slot).ToString("hh:mm tt")
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-success">Confirm Booking</button>
+                <a asp-controller="Doctors" asp-action="Index" class="btn btn-outline-secondary">Back</a>
+            </form>
+        </div>
+    </div>
+</div>

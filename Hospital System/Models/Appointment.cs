@@ -1,0 +1,16 @@
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Hospital_System.Models
+{
+    public class Appointment
+    {
+        public int Id { get; set; }
+        public string PatientName { get; set; } 
+        public DateTime Date { get; set; }
+        public TimeSpan Time { get; set; }
+
+        public int DoctorId { get; set; }
+        [ForeignKey(nameof(DoctorId))]
+        public Doctor Doctor { get; set; }
+    }
+}
